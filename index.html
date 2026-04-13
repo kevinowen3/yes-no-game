@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yes/No Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Yes / No Game</h1>
+    <p class="subtitle">The respondent must answer questions without saying "Yes" or "No"!</p>
+
+    <div class="player-inputs">
+      <div class="input-group">
+        <label for="interviewer">Interviewer</label>
+        <div class="input-with-dropdown">
+          <input type="text" id="interviewer" placeholder="Enter name" autocomplete="off">
+          <button type="button" class="dropdown-toggle" data-for="interviewer" title="Show saved names">&#9662;</button>
+          <ul class="name-dropdown hidden" id="interviewerDropdown"></ul>
+        </div>
+      </div>
+      <button id="swapBtn" class="btn-swap hidden" title="Swap roles">&#8646;</button>
+      <div class="input-group">
+        <label for="respondent">Respondent</label>
+        <div class="input-with-dropdown">
+          <input type="text" id="respondent" placeholder="Enter name" autocomplete="off">
+          <button type="button" class="dropdown-toggle" data-for="respondent" title="Show saved names">&#9662;</button>
+          <ul class="name-dropdown hidden" id="respondentDropdown"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="timer-display" id="timer">3:00</div>
+    <div class="timer-click-hint" id="timerClickHint">Click timer for large display</div>
+
+    <div class="controls">
+      <div class="time-config">
+        <label for="minutes">Minutes:</label>
+        <select id="minutes">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3" selected>3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <button id="startStopBtn" class="btn btn-start">Start</button>
+    </div>
+
+    <div id="announcement" class="announcement hidden"></div>
+
+    <button id="resetBtn" class="btn btn-reset hidden">Play Again</button>
+
+    <label class="pref-checkbox">
+      <input type="checkbox" id="autoLargeDisplay">
+      <span>Auto large display on start</span>
+    </label>
+
+    <button id="manageBtn" class="btn btn-manage hidden">Manage Players</button>
+
+    <div id="managePanel" class="manage-panel hidden">
+      <h2>Saved Players</h2>
+      <ul id="playerList" class="player-list"></ul>
+      <button id="closePanelBtn" class="btn btn-close-panel">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
