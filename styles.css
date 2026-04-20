@@ -510,7 +510,7 @@ h1 {
 }
 
 /* Responsive: phones / small screens */
-@media (max-width: 900px) and (orientation: portrait), (max-width: 480px) {
+@media (pointer: coarse) and (orientation: portrait), (max-width: 480px) {
   body { align-items: stretch; }
   .container {
     padding: 2rem 0.5rem;
