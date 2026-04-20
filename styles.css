@@ -513,15 +513,20 @@ h1 {
 @media (max-width: 480px) {
   body { align-items: stretch; }
   .container {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0.5rem;
     max-width: none;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  h1 { font-size: 2.6rem; }
-  .subtitle { font-size: 1.05rem; margin-bottom: 2.5rem; }
+  h1 {
+    font-size: 15.5vw;
+    letter-spacing: 0;
+    white-space: nowrap;
+    margin-bottom: 0.5rem;
+  }
+  .subtitle { font-size: 1.05rem; margin-bottom: 2.5rem; padding: 0 0.5rem; }
   .timer-display { font-size: 7rem; margin-bottom: 1.5rem; }
   .player-inputs { flex-direction: column; align-items: stretch; }
   .btn-swap { align-self: center; }
