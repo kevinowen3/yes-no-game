@@ -242,6 +242,8 @@ h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-top: 1rem;
+  text-align: center;
+  padding: 0 1rem;
   pointer-events: none;
   animation: announceIn 0.5s ease-out;
 }
