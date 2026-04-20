@@ -509,36 +509,41 @@ h1 {
   display: none !important;
 }
 
-/* Responsive: small screens */
-@media (max-width: 480px) {
+/* Responsive: phones / small screens */
+@media (max-width: 900px) and (orientation: portrait), (max-width: 480px) {
   body { align-items: stretch; }
   .container {
-    padding: 1.5rem 0.5rem;
+    padding: 2rem 0.5rem;
     max-width: none;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
   }
   h1 {
-    font-size: 15.5vw;
+    font-size: 16vw;
     letter-spacing: 0;
     white-space: nowrap;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
   }
-  .subtitle { font-size: 1.05rem; margin-bottom: 2.5rem; padding: 0 0.5rem; }
-  .timer-display { font-size: 7rem; margin-bottom: 1.5rem; }
-  .player-inputs { flex-direction: column; align-items: stretch; }
-  .btn-swap { align-self: center; }
-  .input-group label { font-size: 1rem; }
-  .input-with-dropdown input { font-size: 1.15rem; padding: 0.8rem 2.2rem 0.8rem 1rem; }
-  .time-config { font-size: 1.05rem; }
-  .time-config select { font-size: 1.1rem; padding: 0.5rem 0.8rem; }
-  .btn { font-size: 1.25rem; padding: 0.9rem 2.5rem; }
-  .announcement { font-size: 1.6rem; padding: 1.4rem; }
-  .pref-checkbox { font-size: 1rem; }
-  .pref-checkbox input[type="checkbox"] { width: 1.2rem; height: 1.2rem; }
-  .btn-manage { font-size: 1rem; padding: 0.6rem 1.4rem; }
+  .subtitle { font-size: 4vw; margin-bottom: 0; padding: 0 0.5rem; }
+  .timer-display { font-size: 28vw; margin-bottom: 0; line-height: 1; }
+  .timer-click-hint { font-size: 3vw; margin-top: 0; margin-bottom: 0; }
+  .player-inputs { flex-direction: column; align-items: stretch; margin-bottom: 0; gap: 1rem; }
+  .btn-swap { align-self: center; width: 3.5rem; height: 3.5rem; font-size: 2rem; }
+  .input-group label { font-size: 3.2vw; }
+  .input-with-dropdown input { font-size: 4.5vw; padding: 1rem 3rem 1rem 1.2rem; }
+  .dropdown-toggle { width: 2.5rem; font-size: 1.2rem; }
+  .controls { gap: 1.5rem; margin-bottom: 0; flex-wrap: wrap; }
+  .time-config { font-size: 4vw; }
+  .time-config select { font-size: 4.2vw; padding: 0.6rem 1rem; }
+  .btn { font-size: 5vw; padding: 1.1rem 3rem; }
+  .announcement { font-size: 6vw; padding: 1.5rem; }
+  .pref-checkbox { font-size: 3.6vw; margin-top: 0; }
+  .pref-checkbox input[type="checkbox"] { width: 1.4rem; height: 1.4rem; }
+  .btn-manage { font-size: 3.6vw; padding: 0.7rem 1.6rem; margin-top: 0; }
 }
 
 /* Responsive: large screens / TVs */
